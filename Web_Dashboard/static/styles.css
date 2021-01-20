@@ -1,0 +1,122 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  background-color: #0d2f64;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #0d2f64;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+li {
+  color: white;
+  font-size: 22.5px;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  color: white;
+}
+
+a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+a.none {
+  float: none;
+  color: dodgerblue;
+  text-align: inherit;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 0px;
+}
+
+a.overridefloat {
+  float: none;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+a.overridefloat:hover {
+  background-color: #45a3ff;
+}
+
+a.text {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+a:hover {
+  color: #FFFF00;
+}
+
+a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  width: calc(100% / 3);
+  padding: 10px;
+  height: calc(100vh - 149px)
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .column {
+    width: 100%;
+    height: calc((100vh - 222px)*0.5)
+  }
+}
