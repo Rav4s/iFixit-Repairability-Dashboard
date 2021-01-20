@@ -39,20 +39,19 @@ def data_from_each(list_of_manufacturers_without_tags, list_of_models_without_ta
         print(list_of_manufacturers_without_tags[j], list_of_models_without_tags[j], list_of_scores_without_tag[j])
         j = j + 1
 
-def insert_into_csv(list_of_manufacturers_without_tags, list_of_models_without_tags, list_of_scores_without_tag):
+def insert_into_csv(list_of_manufacturers_without_tags, list_of_models_without_tags, list_of_scores_without_tag, file_name):
     j = 0
     for i in list_of_manufacturers_without_tags:
-        with open('list.csv', 'a', newline='') as file:
+        with open(file_name, 'a', newline='') as file:
             writer = csv.writer(file)
             print(list_of_manufacturers_without_tags[j], list_of_models_without_tags[j], list_of_scores_without_tag[j])
             writer.writerow([list_of_manufacturers_without_tags[j], list_of_models_without_tags[j], list_of_scores_without_tag[j]])
         j = j + 1
 
-def main():
-    with open('list.csv', 'w', newline='') as file:
+def scrape(link, file_name):
+    with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Manufacturer", "Model", "Score"])
-    link = "https://www.ifixit.com/smartphone-repairability"
     page = requests.get(link)
     soup = BeautifulSoup(page.content, 'html.parser')
     device_names = soup.findAll("div", {"class": "cell device-name"})
@@ -60,7 +59,13 @@ def main():
     list_of_manufacturers_without_tags = get_device_manufacturers(device_names)
     list_of_models_without_tags = get_device_models(device_names, soup)
     list_of_scores_without_tag = format_device_scores(device_scores, soup)
-    insert_into_csv(list_of_manufacturers_without_tags, list_of_models_without_tags, list_of_scores_without_tag)
+    insert_into_csv(list_of_manufacturers_without_tags, list_of_models_without_tags, list_of_scores_without_tag, file_name)
+
+
+def main():
+    scrape("https://www.ifixit.com/smartphone-repairability", "smartphone.csv")
+    scrape("https://www.ifixit.com/laptop-repairability", "laptop.csv")
+    scrape("https://www.ifixit.com/tablet-repairability", "tablet.csv")
 
 if __name__ == '__main__':
     main()
