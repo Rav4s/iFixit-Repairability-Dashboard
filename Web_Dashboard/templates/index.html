@@ -11,38 +11,89 @@
   </head>
   <body>
     <div class="header">
-      <a href="https://github.com/Rav4s/iFixit-Repairability-Dashboard" class="text">iFixit Repairability Score Dashboard - Worst Offenders</a>
+      <a href="https://github.com/Rav4s/iFixit-Repairability-Dashboard" class="text">Worst Offenders</a>
     </div>
     <div class="row">
-      <div class="column" style="background-color:#081c3d; overflow: auto;">
+      <div class="column" style="background-color:#081c3d; overflow: auto; scrollbar-width: thin;">
         <h2>Smartphones</h2>
-        <p>
-          <ul>
+        <h3 style="color: #FF4136;">1/10</h3>
+        <div class="list">
+          <p>
             {% for each in smartphone %}
-            <li>{{ each }}</li>
+            <p>{{ each }}</p>
             {% endfor %}
-          </ul>
-        </p>
+          </p>
+        </div>
+        <h3 style="color: #FF8024;">2/10</h3>
+        <div class="list">
+          <p>
+            {% for each in smartphone_2 %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
+        <h3 style="color: #FFC012;">3/10</h3>
+        <div class="list">
+          <p>
+            {% for each in smartphone_3 %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
       </div>
-      <div class="column" style="background-color:#06152e; overflow: auto;">
+      <div class="column" style="background-color:#06152e; overflow: auto; scrollbar-width: thin;">
         <h2>Tablets</h2>
-        <p>
-          <ul>
+        <h3 style="color: #FF4136;">1/10</h3>
+        <div class="list">
+          <p>
             {% for each in tablet %}
-            <li>{{ each }}</li>
+            <p>{{ each }}</p>
             {% endfor %}
-          </ul>
-        </p>
+          </p>
+        </div>
+        <h3 style="color: #FF8024;">2/10</h3>
+        <div class="list">
+          <p>
+            {% for each in tablet_2 %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
+        <h3 style="color: #FFC012;">3/10</h3>
+        <div class="list">
+          <p>
+            {% for each in tablet_3 %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
       </div>
-      <div class="column" style="background-color:#040e1e; overflow: auto;">
+      <div class="column" style="background-color:#040e1e; overflow: auto; scrollbar-width: thin;">
         <h2>Laptops</h2>
-        <p>
-          <ul>
+        <h3 style="color: #FF4136;">1/10</h3>
+        <div class="list">
+          <p>
             {% for each in laptop %}
-            <li>{{ each }}</li>
+            <p>{{ each }}</p>
             {% endfor %}
-          </ul>
-        </p>
+          </p>
+        </div>
+        <h3 style="color: #FF8024;">2/10</h3>
+        <div class="list">
+          <p>
+            {% for each in laptop_2 %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
+        <h3 style="color: #FFC012;">3/10</h3>
+        <div class="list">
+          <p>
+            {% for each in laptop_3 %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
       </div>
     </div>
     <div class="header" style="padding: 10px 10px;">

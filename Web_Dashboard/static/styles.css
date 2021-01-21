@@ -1,8 +1,23 @@
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #0d2f64;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #040e1e;  /* creates padding around scroll thumb */
+}
+
 * {box-sizing: border-box;}
 
 body {
   margin: 0;
   background-color: #0d2f64;
+  scrollbar-width: thin;
 }
 
 .header {
@@ -13,12 +28,19 @@ body {
   padding: 20px 10px;
 }
 
-li {
+.list {
   color: white;
   font-size: 22.5px;
+  text-align: center;
 }
 
 h2 {
+  color: white;
+  text-align: center;
+  font-size: 32.5px;
+}
+
+h3 {
   color: white;
   text-align: center;
 }
@@ -119,4 +141,18 @@ a.active {
     width: 100%;
     height: calc((100vh - 222px)*0.5)
   }
+}
+
+.column::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.column::-webkit-scrollbar-track {
+  background: #0d2f64;        /* color of the tracking area */
+}
+
+.column::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #040e1e;  /* creates padding around scroll thumb */
 }
