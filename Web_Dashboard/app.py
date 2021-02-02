@@ -3,9 +3,9 @@ import csv
 from flask import Flask, make_response, request, render_template, redirect, url_for, send_from_directory #Import flask web server and additional components
 
 app = Flask(__name__)
-smartphone_file = "/home/ravi/Documents/Git/iFixit-Repairability-Dashboard/smartphone.csv"
-tablet_file = "/home/ravi/Documents/Git/iFixit-Repairability-Dashboard/tablet.csv"
-laptop_file = "/home/ravi/Documents/Git/iFixit-Repairability-Dashboard/laptop.csv"
+smartphone_file = "../smartphone.csv"
+tablet_file = "../tablet.csv"
+laptop_file = "../laptop.csv"
 
 @app.route('/')
 def index():
