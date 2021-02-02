@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>8 out of 10 iFixit Repairability Score</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/styles.css" rel="stylesheet" media="screen">
+    <link rel="manifest" href="static/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="text">8/10</a>
+    </div>
+    <div class="row">
+      <div class="column3" style="background-color:#040e1e; overflow: auto; scrollbar-width: thin;">
+        <p style="text-align:center; font-size: 25px; color: #82C72E;">Devices that scored a 8 out of 10 on the iFixit Repairability Score. Pretty great!</p>
+        <h2>Smartphones</h2>
+        <div class="list">
+          <p>
+            {% for each in smartphone %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
+        <br>
+        <h2>Tablets</h2>
+        <div class="list">
+          <p>
+            {% for each in tablet %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
+        <br>
+        <h2>Laptops</h2>
+        <div class="list">
+          <p>
+            {% for each in laptop %}
+            <p>{{ each }}</p>
+            {% endfor %}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="header" style="padding: 25px 10px;">
+      <p style="text-align:center;">Made with &#10084;&#65039; by <a class="none" href="https://www.yeetpc.com/about.html" target="_blank" rel="noopener">Ravi Shah</a></p>
+    </div>
+  </body>
+</html>

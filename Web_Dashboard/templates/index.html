@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Worst Offenders</title>
+    <title>iFixit Repairability Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find which devices are the most and least repairable, according to iFixit">
     <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="static/styles.css" rel="stylesheet" media="screen">
     <link rel="manifest" href="static/site.webmanifest">
@@ -11,92 +13,31 @@
   </head>
   <body>
     <div class="header">
-      <a href="https://github.com/Rav4s/iFixit-Repairability-Dashboard" class="text">Worst Offenders</a>
+      <a href="#" class="text">iFixit Repairability Dashboard</a>
     </div>
     <div class="row">
-      <div class="column" style="background-color:#081c3d; overflow: auto; scrollbar-width: thin;">
-        <h2>Smartphones</h2>
-        <h3 style="color: #FF4136;">1/10</h3>
-        <div class="list">
-          <p>
-            {% for each in smartphone %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-        <h3 style="color: #FF8024;">2/10</h3>
-        <div class="list">
-          <p>
-            {% for each in smartphone_2 %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-        <h3 style="color: #FFC012;">3/10</h3>
-        <div class="list">
-          <p>
-            {% for each in smartphone_3 %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-      </div>
-      <div class="column" style="background-color:#06152e; overflow: auto; scrollbar-width: thin;">
-        <h2>Tablets</h2>
-        <h3 style="color: #FF4136;">1/10</h3>
-        <div class="list">
-          <p>
-            {% for each in tablet %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-        <h3 style="color: #FF8024;">2/10</h3>
-        <div class="list">
-          <p>
-            {% for each in tablet_2 %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-        <h3 style="color: #FFC012;">3/10</h3>
-        <div class="list">
-          <p>
-            {% for each in tablet_3 %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-      </div>
-      <div class="column" style="background-color:#040e1e; overflow: auto; scrollbar-width: thin;">
-        <h2>Laptops</h2>
-        <h3 style="color: #FF4136;">1/10</h3>
-        <div class="list">
-          <p>
-            {% for each in laptop %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-        <h3 style="color: #FF8024;">2/10</h3>
-        <div class="list">
-          <p>
-            {% for each in laptop_2 %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
-        </div>
-        <h3 style="color: #FFC012;">3/10</h3>
-        <div class="list">
-          <p>
-            {% for each in laptop_3 %}
-            <p>{{ each }}</p>
-            {% endfor %}
-          </p>
+      <div class="column2" style="background-color:#040e1e; overflow: auto; scrollbar-width: thin; width: 100%;">
+        <p style="text-align:center; font-size: 25px;">Welcome to the iFixit Repairability Dashboard! Here you can find the repairability scores of many devices that iFixit has analyzed. Click a score below to get started!</p>
+        <div class="centered">
+          <div style="display:block; align-items:center; justify-content:center;"><a href="/one" class="button1 buttonall">1/10</a><a href="/two" class="button2 buttonall">2/10</a><a href="/three" class="button3 buttonall">3/10</a><a href="/four" class="button4 buttonall">4/10</a><a href="/five" class="button5 buttonall">5/10</a><a href="/six" class="button6 buttonall">6/10</a><a href="/seven" class="button7 buttonall">7/10</a><a href="/eight" class="button8 buttonall">8/10</a><a href="/nine" class="button9 buttonall">9/10</a><a href="/ten" class="button10 buttonall">10/10</a></div>
         </div>
       </div>
     </div>
-    <div class="header" style="padding: 10px 10px;">
+    <div class="row">
+      <div class="column2" style="background-color:#081c3d; overflow: auto; scrollbar-width: thin;">
+        <h2 style="font-size: 25px;" class="centered">Ever wondered which devices are the hardest to repair? Find the laptops, tablets, and smartphones which have the worst iFixit Repairability Scores.</h2>
+        <div class="centered">
+          <a href="/worst-offenders" class="buttonhardest buttonall">Worst Offenders</a>
+        </div>
+      </div>
+      <div class="column2" style="background-color:#06152e; overflow: auto; scrollbar-width: thin;">
+        <h2 style="font-size: 25px;" class="centered">Want to find a device which is absolute repair bliss? Find the laptops, tablets, and smartphones which have the best iFixit Repairability Scores.</h2>
+        <div class="centered">
+          <a href="/most-repairable" class="buttonbest buttonall">Most Repairable Devices</a>
+        </div>
+      </div>
+    </div>
+    <div class="header" style="padding: 25px 10px;">
       <p style="text-align:center;">Made with &#10084;&#65039; by <a class="none" href="https://www.yeetpc.com/about.html" target="_blank" rel="noopener">Ravi Shah</a></p>
     </div>
   </body>

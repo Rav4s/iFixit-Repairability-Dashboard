@@ -3,13 +3,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #0d2f64;        /* color of the tracking area */
+  background: #040e1e;        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: blue;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid #040e1e;  /* creates padding around scroll thumb */
+  border: 5px solid #040e1e;  /* creates padding around scroll thumb */
 }
 
 * {box-sizing: border-box;}
@@ -49,25 +49,14 @@ p {
   color: white;
 }
 
-a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
-
 a.none {
   float: none;
-  color: dodgerblue;
+  color: yellow;
   text-align: inherit;
   padding: 0px;
   text-decoration: none;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 12px;
   border-radius: 0px;
 }
 
@@ -88,6 +77,13 @@ a.overridefloat:hover {
 }
 
 a.text {
+  float: none;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 4px;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
@@ -122,7 +118,23 @@ a.active {
   width: 33.33%;
   width: calc(100% / 3);
   padding: 10px;
-  height: calc(100vh - 149px)
+  height: calc(100vh - 149px);
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  width: calc(100% / 2);
+  padding: 10px;
+  height: calc((100vh - 149px) / 2);
+}
+
+.column3 {
+  float: left;
+  width: 50%;
+  width: 100%;
+  padding: 10px;
+  height: calc(100vh - 149px);
 }
 
 .row:after {
@@ -139,20 +151,186 @@ a.active {
 @media screen and (max-width: 1200px) {
   .column {
     width: 100%;
-    height: calc((100vh - 222px)*0.5)
+    height: 100%;
   }
 }
 
-.column::-webkit-scrollbar {
+@media screen and (max-width: 1200px) {
+  .column2 {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.column::-webkit-scrollbar, .column2::-webkit-scrollbar, .column3::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
 
-.column::-webkit-scrollbar-track {
-  background: #0d2f64;        /* color of the tracking area */
+.column::-webkit-scrollbar-track, .column2::-webkit-scrollbar-track, .column3::-webkit-scrollbar-track {
+  background: #040e1e;        /* color of the tracking area */
 }
 
-.column::-webkit-scrollbar-thumb {
+.column::-webkit-scrollbar-thumb, .column2::-webkit-scrollbar-thumb, .column3::-webkit-scrollbar-thumb {
   background-color: blue;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid #040e1e;  /* creates padding around scroll thumb */
+  border: 5px solid #040e1e;  /* creates padding around scroll thumb */
+}
+
+.buttonall {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 5px solid #FF4136;
+  text-align: center;
+}
+
+.button1:hover {
+  background-color: #FF4136;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 5px solid #FF612D;
+  text-align: center;
+}
+
+.button2:hover {
+  background-color: #FF612D;
+  color: white;
+}
+.button3 {
+  background-color: white;
+  color: black;
+  border: 5px solid #FF8124;
+  text-align: center;
+}
+
+.button3:hover {
+  background-color: #FF8124;
+  color: white;
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 5px solid #FFA01B;
+  text-align: center;
+}
+
+.button4:hover {
+  background-color: #FFA01B;
+  color: white;
+}
+.button5 {
+  background-color: white;
+  color: black;
+  border: 5px solid #FFC012;
+  text-align: center;
+}
+
+.button5:hover {
+  background-color: #FFC012;
+  color: white;
+}
+.button6 {
+  background-color: white;
+  color: black;
+  border: 5px solid #D5C21B;
+  text-align: center;
+}
+
+.button6:hover {
+  background-color: #D5C21B;
+  color: white;
+}
+.button7 {
+  background-color: white;
+  color: black;
+  border: 5px solid #ABC524;
+  text-align: center;
+}
+
+.button7:hover {
+  background-color: #ABC524;
+  color: white;
+}
+.button8 {
+  background-color: white;
+  color: black;
+  border: 5px solid #82C72E;
+  text-align: center;
+}
+
+.button8:hover {
+  background-color: #82C72E;
+  color: white;
+}
+.button9 {
+  background-color: white;
+  color: black;
+  border: 5px solid #58CA37;
+  text-align: center;
+}
+
+.button9:hover {
+  background-color: #58CA37;
+  color: white;
+}
+.button10 {
+  background-color: white;
+  color: black;
+  border: 5px solid #2ECC40;
+  text-align: center;
+}
+
+.button10:hover {
+  background-color: #2ECC40;
+  color: white;
+}
+
+.buttonhardest {
+  background-color: white;
+  color: black;
+  border: 5px solid #FF4136;
+  text-align: center;
+}
+
+.buttonhardest:hover {
+  background-color: #FF4136;
+  color: white;
+}
+
+.buttonbest {
+  background-color: white;
+  color: black;
+  border: 5px solid #2ECC40;
+  text-align: center;
+}
+
+.buttonbest:hover {
+  background-color: #2ECC40;
+  color: white;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
