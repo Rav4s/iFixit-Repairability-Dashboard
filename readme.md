@@ -10,6 +10,6 @@ Once these files are stored, you can run Web_Dashboard/app.py, which starts a wa
 
 ## Live Demo
 
-A live demo of this project is available at repairability.yeetpc.com
+A live demo of this project is available at https://repairability.yeetpc.com
 
 Note: this project is neither sponsored by nor affiliated with iFixit.
