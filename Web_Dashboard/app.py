@@ -443,6 +443,10 @@ def ten():
 
     return render_template('ten.html', smartphone=ten_smartphone, tablet=ten_tablet, laptop=ten_laptop)
 
+@app.route('/rickroll')
+def index():
+    return render_template('rickroll.html')
+
 if __name__ == '__main__':
     from waitress import serve
     serve(app, host="0.0.0.0", port=1235)
